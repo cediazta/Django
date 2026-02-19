@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Volver a index</a>
+    <h3>Par o impar</h3>
+    <form method="post"> <!-- Enviar informacion de formulario oculta -->
+        {% csrf_token %}
+            Numero: <input type="number" name="cajanum"/><br/>
+    <button>Enviar</button>
+    </form>
+     <h2 style="color: deepskyblue;">El numero es {{resultado}}</h2>
+</body>
+</html>
