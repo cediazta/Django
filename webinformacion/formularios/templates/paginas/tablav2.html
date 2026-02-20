@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'paginas/menu.html' %}
+    <h3>VERSION 1</h3>
+    <form method="post">
+        {% csrf_token %}
+        Numero: <input type="number" name="cajanumero">
+        <button>Enviar</button>
+    </form>
+    <TABLE border="1" bordercolor=blue>
+        <thead>
+            <tr>
+                <th>OPERACION</th>
+                <th>RESULTADO</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dato in listadatos %}
+            <tr>
+                <td> {{ dato.operacion }} </td>
+                <td> {{ dato.resultado }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </TABLE>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'paginas/menu.html' %}
+    <h1>Deportes</h1>
+    <form method="post">
+        {% csrf_token %}
+        Seleccione un depote:
+        <select name="selectdeporte">
+            {% for sport in listadeportes %}
+                <option value="{{sport}}">
+                    {{sport}}
+                </option>
+            {% endfor %}
+        </select>
+        <button>Mostrar Seleccion</button>
+    </form>
+    <h2>
+        Su deporte favorito es {{deporte}}
+    </h2>
+    
+</body>
+</html>

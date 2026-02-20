@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/">Volver a index</a>
+    {% include 'paginas/menu.html' %}
     <h3>Par o impar</h3>
     <form method="post"> <!-- Enviar informacion de formulario oculta -->
         {% csrf_token %}

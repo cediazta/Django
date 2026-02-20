@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'paginas/menu.html' %}
+    <h2>Colores</h2>
+    <form method="post">
+        {% csrf_token %}
+        Seleccione un color:
+        <select name="selectcolor">
+            {% for color in listacolores %}
+                <option value="{{color}}">
+                    {{color}}
+                </option>
+            {% endfor %}
+        </select>
+        <button>Mostrar Seleccion</button>
+    </form>
+    <h2>
+        Su deporte favorito es {{selectcolor}}
+    </h2>
+</body>
+</html>

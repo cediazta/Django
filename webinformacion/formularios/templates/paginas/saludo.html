@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% include 'paginas/menu.html' %}
     <h1>Saludando!!</h1>
-    <a href="/">Volver a index</a>
     <form method="post">
         {% csrf_token %} <!-- Medida antihacking (poner siempre que haya formulario) -->
         Introduzca su nombre: <input type="text" name="cajanombre"/>

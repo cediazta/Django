@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/">volver a index</a>
+    {% include 'paginas/menu.html' %}
     <h3>Conjetura Collatz</h3>
     <form method="post">
         {% csrf_token %}

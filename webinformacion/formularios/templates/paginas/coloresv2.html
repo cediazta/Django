@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'paginas/menu.html' %}
+    <h1>Colores</h1>
+    <form method="post">
+        {% csrf_token %}
+        Seleccione un color:
+        <select name="selectcolores">
+        {% for dato in listacolores %}
+            <option value="{{dato.valor}}">
+                {{dato.nombrecolor}}
+            </option>
+        {%endfor%}
+        </select>
+        <button>Mostrar color</button>
+    </form> 
+    <h1 style="background-color: {{color}}">
+        Ha seleccionado el color: {{color}}
+    </h1>
+</body>
+</html>

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<body>
+    {% include 'paginas/menu.html' %}
     <h1>Sumar numeros</h1>
-    <a href="/">Volver a index</a>
     <form method="post">
         {% csrf_token %}
         Numero 1: <input type="numbrer" name="cajanum1"><br/>
