@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Volver</a> |
+    <h1>Actualizar Departamento</h1>
+        <form method="post">
+        {% csrf_token %}
+        ID Departamento: <input type="number" name="cajaid">
+        Nombre: <input type="text" name="cajanombre">
+        Localidad: <input type="text" name="cajalocalidad">
+        <button>Actualizar</button>
+    </form>
+</body>
+</html>
