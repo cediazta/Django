@@ -10,9 +10,9 @@
     <h1>Actualizar Departamento</h1>
         <form method="post">
         {% csrf_token %}
-        ID Departamento: <input type="number" name="cajaid">
-        Nombre: <input type="text" name="cajanombre">
-        Localidad: <input type="text" name="cajalocalidad">
+        ID Departamento: <input type="number" name="cajaid" value="{{departamento.id}}"></b>
+        Nombre: <input type="text" name="cajanombre" value="{{departamento.nombre}}"></b>
+        Localidad: <input type="text" name="cajalocalidad" value="{{departamento.localidad}}"></b>
         <button>Actualizar</button>
     </form>
 </body>

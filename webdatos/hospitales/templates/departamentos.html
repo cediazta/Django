@@ -8,7 +8,7 @@
 <body>
     <a href="/">Volver</a> |
     <a href="/insertdpt">Crear Departamento</a> |
-    <a href="/updatedept">Actualizar Departamento</a> |
+    <a href="/updatedept?dato=20">Actualizar Departamento</a> |
     <a href="/buscarform">Buscar Departamento</a> |
     <a href="/buscarget?dato=10">Buscar Departamento Get 10</a> |
     <a href="/buscarget?dato=20">Buscar Departamento Get 20</a> |
@@ -21,6 +21,12 @@
                 <td>{{d.localidad}}</td> <!-- Columna 3 -->
                 <td>
                     <a href="/buscarget?dato={{d.id}}">Detalles</a>
+                </td>
+                <td>
+                    <a href="/updatedept?dato={{d.id}}">Edit</a>
+                </td>
+                <td>
+                    <a href="/delete?dato={{d.id}}">Borrar</a>
                 </td>
             </tr>
         {% endfor %}

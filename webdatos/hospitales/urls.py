@@ -8,5 +8,8 @@ urlpatterns = [
     path('updatedept/', views.actualizarDepartamento, name="updatedept"),
     path('buscarform/', views.buscarDepartamentoForm, name="buscarform"),
     path('buscarget/', views.buscarDepartamentoGet, name="buscarget"),
-    
+    path('delete/', views.delete, name="delete"),
+    path('empdept/', views.empleadosDepartamento, name="empdept"),
+    path('empsalario/', views.empleadosSalario , name="empsalario"),
+
 ]

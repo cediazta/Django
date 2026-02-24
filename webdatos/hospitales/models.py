@@ -8,6 +8,13 @@ class Departamento:
         self.nombre = ""
         self.localidad = ""
 
+class Empleado:
+    def __init__(self):
+        self.idEmpleado = 0
+        self.apellido = ""
+        self.oficio = ""
+        self.salario = 0
+
 class ServiceDepartamentos:
     def __init__(self):
         self.conection = oracledb.connect(user="system", 
@@ -54,5 +61,41 @@ class ServiceDepartamentos:
         cursor.close()
         return dept
     
+    def deleteDepartamento(self, id):
+        sql = "delete from DEPT where DEPT_NO=:id"
+        cursor = self.conection.cursor()
+        cursor.execute(sql, (id,))
+        self.conection.commit()
+        cursor.close()
+
+    def buscarEmpleadosDepartamento(self, iddept):
+        sql = "select EMP_NO, APELLIDO, OFICIO, SALARIO from EMP where DEPT_NO=:iddept"
+        cursor = self.conection.cursor()
+        cursor.execute(sql, (iddept,))
+        listaEmpleados = []
+        for row in cursor:
+            emp = Empleado()
+            emp.idEmpleado = row[0]
+            emp.apellido = row[1]
+            emp.oficio = row[2]
+            emp.salario = row[3]
+            listaEmpleados.append(emp)
+        cursor.close()
+        return listaEmpleados
+    
+    def buscarEmpleadosSalario(self, numSalario,):
+        sql = "select EMP_NO, APELLIDO, OFICIO, SALARIO from EMP where SALARIO>:mayorsal"
+        cursor = self.conection.cursor()
+        cursor.execute(sql, (numSalario,))
+        listaSalariosSup = []
+        for row in cursor:
+            salSup = Empleado()
+            salSup.idEmpleado = row[0]
+            salSup.apellido = row[1]
+            salSup.oficio = row[2]
+            salSup.salario = row[3]
+            listaSalariosSup.append(salSup)
+        cursor.close()
+        return listaSalariosSup
 
 

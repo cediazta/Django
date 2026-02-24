@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Buscar Empleados Salario</h1>
+    <form method="post">
+        {% csrf_token %}
+        Ver salarios superiores a <input type="number" name="cajasalario">
+        <button>Buscar</button>
+    </form>
+    <table border="1">
+        {% for i in salario %}
+        <tr>
+            <td>{{i.idEmpleado}}</td>
+            <td>{{i.apellido}}</td>
+            <td>{{i.oficio}}</td>
+            <td>{{i.salario}}</td>
+        </tr>
+        {% endfor %}  
+    </table>
+</body>
+</html>

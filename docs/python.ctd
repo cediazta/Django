@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node unique_id="3" master_id="0" name="SQL" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1770242417" ts_lastsave="1771341020">
+    <rich_text foreground="#ffbe6f">## CONSULTAS DE AGRUPACION (MISMA TABLA)</rich_text>
+    <rich_text>
+
+• SINTAXIS
+</rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">columna1</rich_text>
+    <rich_text foreground="#cccccc">, </rich_text>
+    <rich_text foreground="#9cdcfe">columna2</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">tabla</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">nombre</rich_text>
+    <rich_text foreground="#cccccc">, </rich_text>
+    <rich_text foreground="#9cdcfe">apellido</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">clientes</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+
+• DISTINCT (SOLO MUESTRA LOS CAMPOS DISTINTOS)
+Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">DISTINCT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">nombre</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">clientes</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+ - Muestra los nombres sin repetir.
+ 
+• WHERE (especificar datos, algo concreto)
+Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#d4d4d4">*</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">doctor</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">WHERE</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">hospital_cod</rich_text>
+    <rich_text> </rich_text>
+    <rich_text foreground="#d4d4d4">=</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#b5cea8">22</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+ - Muestra todo de la tabla DOCTOR que tenga 22 en la columna HOSPITAL_COD.
+ 
+• ORDER BY (Orden descendente)
+Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#d4d4d4">*</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">doctor</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">ORDER</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">BY</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">hospital_cod</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+ - Ordena la columna HOSPITAL_COD en orden descendente.
+ 
+• ORDER BY (Orden ascendente)
+Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#d4d4d4">*</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">doctor</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">ORDER</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">BY</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">hospital_cod</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">ASC</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+ - Ordena la columna HOSPITAL_COD en orden ascendente.
+
+• LIKE (damos un criterio de busqueda variable)
+•Ej: </rich_text>
+    <rich_text foreground="#569cd6">SELECT</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">apellido</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">FROM</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">doctor</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">WHERE</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#9cdcfe">especialidad</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#569cd6">LIKE</rich_text>
+    <rich_text foreground="#cccccc"> </rich_text>
+    <rich_text foreground="#ce9178">'%logia'</rich_text>
+    <rich_text foreground="#cccccc">;</rich_text>
+    <rich_text>
+ - Muestra los APELLIDOS de la tabla DOCTOR cuya ESPECIALIDAD contenga ‘%logia’ (% cualquier caracter)
+
+
+
+
+
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## CONSULTAS COMBINADAS (DISTINTAS TABLAS)</rich_text>
+    <rich_text>
+
+• SINTAXIS
+SELECT tabla1.campo, tabla1.campo2, tabla2.campo1, tabla2.campo2 FROM tabla1 INNER JOIN tabla2 ON tabla1.camporelacion = tabla2.camporelacion;
+Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp INNER JOIN dept ON emp.dept_no = emp.dept_no;
+-- Miestra el apellido, oficio, nombre de departamento, localidad de los empleados de las tablas dept y emp.
+
+• WHERE
+ej: SELECT emp.apellIdo, emp.oficio, dept.dnombre, dept.loc FROM emp INNER JOIN dept on emp.dept_no = dept.dept_no WHERE dept.loc ='SEVILLA';
+-- Miestra el apellido, oficio, nombre de departamento, localidad de los empleados de las tablas dept y emp y solo mostrar los que su localidad sea Sevilla.
+
+• AS (alias)
+Ej: SELECT e.apellIdo, e.oficio, d.dnombre, d.loc FROM emp e INNER JOIN dept d on e.dept_no = d.dept_no WHERE d.loc ='SEVILLA';
+-- Crea un alias a las 2 tablas y se sustituye como nombre de tabla al ingresar los campos.
+
+
+
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## CONSULTAS COMBINADAS + CONSULTAS DE AGRUPACION</rich_text>
+    <rich_text>
+Ej: SELECT COUNT(*) AS personas, dept.dnombre FROM emp INNER JOIN dept on emp.dept_no = dept.dept_no GROUP BY dept.dnombre;
+-- Muestra el numero de personas por cada nombre de departamento de los empleados.
+
+•  JOIN
+ → INNER JOIN: (Muestra los resultados que combinen entre las dos tablas).
+ Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp INNER JOIN dept ON emp.dept_no = dept.dept_no;
+ 
+ → LEFT JOIN: (Muestra los resultados que combinen entre las dos tablas y tambien los que no 				combinen de la tabla de la izquierda). (ES LA TABLA ANTES DEL JOIN)
+ Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp LEFT JOIN dept ON emp.dept_no = dept.dept_no;
+ 
+ → RIGHT JOIN: (Muestra los resultados que combinen entre las dos tablas y tambien los que no 				combinen de la tabla de la derecha). (ES LA TABLA DESPUES DEL JOIN)
+ Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp RIGHT JOIN dept ON emp.dept_no = dept.dept_no;
+ 
+ → FULL JOIN: (Muestra los resultados de las dos tablas combinen o no combinen). (MUESTRA TODOS)
+ Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp FULL JOIN dept ON emp.dept_no = dept.dept_no;
+ 
+ → CROSS JOIN: (Muestra el producto cartesiano). (NO SE UTILIZA “ON")
+ Ej: SELECT emp.apellido, emp.oficio, dept.dnombre, dept.loc FROM emp CROSS JOIN dept;
+ 
+
+• INNER JOIN (CON LAS TABLAS QUE QUERAMOS)
+Ej: select tabla1.campo1, tabla1.campo2, tabla2.campo1, tabla2.campo2, tabla3.campo1, tabla3.campo2 FROM tabla1 INNER JOIN tabla2 on tabla1.camporelacion= tabla2.camporelacion INNER JOIN tabla3 on tabla1.camporelacion = tabla3.camporelacion
+
+→ Si hay mas campos relacionados entre si, se pondria con un AND
+Ej: SELECT plantilla.apellido, plantilla.funcion, hospital.nombre, hospital.direccion, sala.nombre FROM plantilla INNER JOIN hospital ON plantilla.hospital_cod = hospital.hospital_cod INNER JOIN sala ON hospital.hospital_cod = sala.hospital_cod AND plantilla.sala_cod = sala.sala_cod;
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## SUBCONSULTAS</rich_text>
+    <rich_text>
+(es necesario los datos de una primera consulta para realizad otra consulta)
+→ Consultas de seleccion (evitarlas ya que pueden producir bloqueos).
+
+Ej: SELECT MAX(salario) FROM emp;
+-- Primero se busca un valor especifico (el empleado que mas cobra) para saber el salario.
+Ej: SELECT * FROM emp WHERE salario=650000;
+-- una vez saber el salario, se puede hacer la subconsulta completa gracias a ese valor.
+
+→ SINTAXIS (lo anterior pero combinada) CONSULTA1 =(CONSULTA2)
+Ej: SELECT * FROM emp WHERE salario=(SELECT MAX(salario) FROM emp);
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## VARIAS SUBCONSULTAS (CONSULTA1 = (CONSULTA2) Y (CONSULTA3)</rich_text>
+    <rich_text>
+Ej: SELECT * FROM emp WHERE oficio = (SELECT oficio FROM emp WHERE apellido = 'alonso') AND salario &gt; (SELECT salario FROM emp WHERE apellido ='sala');
+
+• IN (para devolver mas de un valor)
+Ej: SELECT * FROM emp WHERE oficio IN (SELECT oficio FROM emp WHERE apellido = 'jimenez' OR apellido = 'alonso');
+
+→ ROWNUM &lt;= numfilas (muestra el numero de filas especificado)
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## CONSULTAS UNION (TABLAS QUE NO ESTAN UNIDAS)</rich_text>
+    <rich_text>
+
+→ Hay que seguir 3 normas:
+	1. La primera consulta es la MAIN.
+	2. Todas las consultas deben tener el mismo numero de columnas
+	3. todas las columnas deben dtener el mismo dato entre si (texto o numero).
+	
+→ SINTAXIS
+
+Ejemplo:
+SELECT apellido, oficio, salario AS SUELDO FROM emp 
+UNION
+SELECT apellido, especialidad, salario FROM doctor 
+UNION
+SELECT apellido, funcion, salario FROM plantilla;
+
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## SELECT TO SELECT (HACER UN SELECT SOBRE UNA CONSULTA YA REALIZADA)</rich_text>
+    <rich_text>
+
+→ 1. Envolver la consulta sobre la que deseemos realizar el select entre parentesis.
+→ 2. que la consulta envuelta tenga un alias.
+(el alias se establece como en los join, con espacio despues del parentesis de la consulta).
+
+→ SINTAXIS
+
+Ejemplo:
+SELECT * FROM (SELECT apellido, oficio, salario AS SUELDO FROM emp 
+UNION
+SELECT apellido, especialidad, salario FROM doctor 
+UNION
+SELECT apellido, funcion, salario FROM plantilla) consulta
+WHERE consulta.sueldo &gt;= 250000;
+
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## SELECT TO ROW (ES UN IF EN EL SERVER)</rich_text>
+    <rich_text>
+
+→ Evalua valores dentro de cada fila y permite cambiar el resultado a mostrar en el cursor por otros datos distintos.
+
+→ SINTAXIS
+SELECT campo1, campo2
+CASE	campo 3
+    WHEN valor1 THEN otrovalor1
+    WHEN valor2 THEN otrovalor2
+    ELSE otrovalor3
+END AS alias
+FROM tabla;
+
+
+Ejemplo:
+SELECT apellido, funcion,
+CASE TURNO
+    WHEN 'T' THEN 'TARDE'
+    WHEN 'M' THEN 'MAÑANA'
+    ELSE 'NOCHE'
+END AS TURNOBONITO, turno 
+FROM plantilla;
+
+
+</rich_text>
+    <rich_text foreground="#ffbe6f">## CONSULTAS DE ACCION</rich_text>
+    <rich_text>
+
+• COMMIT: Los cambios son permanentes.
+• ROLLBACK: Deshace los cambios realizados.
+
+Dentro de las consultas de accion, tenemos 3 instrucciones:
+
+→ INSERT: Crea un nuevo registro en la tabla hasta su confirmacion (commit o rollback).
+
+	→ SINTAXIS: Hay 2 tipos de sintaxis:
+		
+		1. Insertar todos los valores de la fila (todos los datos de la tabla)
+			* Esta sintaxis utiliza la tabla como base para todos los valores, es decir, deberiamos escribir 		TODOS los valores y como esten en el orden de la tabla.
+			
+			→ Insert into TABLA values (col1, col2, col3);
+			
+			Ej: Insert into DEPT values (50, ‘PYTHON’, ‘ALCOBENDAS’);
+			-- insertamos en la tabla un numero de dpto, el nombre del dpto y la localidad.
+
+		2. Insertar solamente algunos valores de la fila/tabla.
+			* Esta sintaxis permite definir solo algunos valores de la fila, no es necesario indicar todos.
+			* El orden de los valores depende de las columnas que yo le indique en la consulta. 
+
+			Sintaxis: insert into TABLA (col1, col2) values (val, val2)
+			
+			Ej: insert into DEPT (DEPT_NO, LOC) values (51,  ‘ALICANTE’);
+			-- Insertamos un dpto 51 en la localidad de Alicante.
+			
+		* En las consultas de accion son muy utiles las subconsultas y son recomendables.
+		
+→ DELETE: Elimina uno o mas registros de la tabla (Tambien vale para eliminar la tabla entera).
+	
+	→ SINTAXIS
+	
+		→ delete from TABLA where condicion;
+		Ej: delete from PLANTILLA where HOSPITAL_COD = (select HOSPITAL_COD from HOSPITAL where NOMBRE = ‘El Carmen’);
+		-- Borrar de la plantilla cuyo codigo de hospital sea igual al codigo correspondiente a ‘El Carmen’.
+		
+
+NOTA: Si la consulta NO tiene where, elimina todos los registros de la tabla.
+
+		→ delete from TABLA;
+		
+
+→ UPDATE: Modifica uno o mas registros de la tabla-.
+	* En la misma consulta podemos indicar que deseamos modificar mas de una consulta.
+	
+	→ SINTAXIS
+	
+		→ update TABLA set CAMPO1= valor 1, CAMPO2= valor2
+		
+		Ej: update PLANTILLA set funcion = ‘ENFERMERA’, SALARIO= SALARIO +1
+		where funcion = ‘ENFERMERO';
+		-- Todos los los ENFERMEROS pasan a ser ENFERMERA y se les sube sl salario a todos en 1.
+		
+NOTA: Si no se pone WHERE se aplica a todos los registros de la tabla.	
+
+		→ update TABLA set CAMPO1= valor 1, CAMPO2= valor2
+		
+		Ej: update PLANTILLA set SALARIO = SALARIO + 1;
+		-- Sube el salario de toda la plantilla en 1.
+		
+• Por supuesto, en UPDATE podemos utilizar subconsultas.
+•
+		(APUNTES)
+
+
+NOTA: Las instrucciones WHERE son iguales que en las consultas de seleccion, operadores y todo.
+
+
+Por ultimo, tenemos una instruccion para eliminar todos los registros de una tabla de la forma mas rapida porque no tiene rollback.
+
+→ TRUNCATE TABLE NOMBRETABLA (Suelen tener esta funcion bloqueada en las empresas para los users).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</rich_text>
+  </node>
+  <node unique_id="1" master_id="0" name="Python" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1723531007" ts_lastsave="1771341750">
+    <rich_text>## Arquitectura de archivos (paquetes)
+	→ Models: Son nuestras clases (Persona, Mes, Coche...).
+	→ Services: Son las clases de acceso a a datos (clases que trabajan con datos).
+	→ Main: Son los programas principales que ejecutan.
+
+• Para generar un paquete de clases en una carpeta, se debe crear un fichero llamado __init__.py
+
+
+	# Sintaxis:
+		→ 	
+
+
+## Tipos de Variables
+	
+	→ str (texto)
+	→ int (numeros)
+	→ float (numeros con decimales)
+	→ complex (numeros complejos)
+	→ boolean (true o false)
+	→ char (caracteres individuales)
+	
+
+## Operadores Aritmeticos
+
+	→ + , - , * , / (sumar , restar , multiplicar , dividir)
+	→ // (division entera)
+	→ ** (potencia)
+	→ % (resto de una division)
+	→ += , -= (suma al valor , resta al valor)
+	
+	
+## Operadores de Comparacion
+
+	→ &gt; , &lt; , == , != (mayor , menor , igual , distinto)
+	→ &gt;= , &lt;= (mayor o igual , menor o igual)
+	
+	
+## Operadores Logicos
+
+	→ and (ambas condiciones se cumplen = True, sino sera False)
+	→ or (sera True si solo se cumple una condicion)
+	→ not (cambia el valor al booleano)
+
+
+## Condicionales (control de Flujo)
+
+	→ if , else (para 2 condiciones, si una se cumple hace una cosa y sino hace la otra)
+	→ elif (para 3 condiciones o mas)
+
+
+## Match y Case (determinar casos de distinto valor - parecido a if)
+
+	→ match (rescata un valor de una variable y lo aplica a las opciones)
+	→ case (son las opciones del match, clasifica los casos y depende del numero de la variable aplica a un caso u otro)
+
+
+## Cadenas de texto y operaciones con string
+
+	→  len (contar caracteres)
+	→ .upper() (mayusculas)
+	→ .lower() (minusculas)
+	→ .title() (primera en mayusculas)
+	→ .capitalize() (primera en mayuscula)
+	→ .split() (convierte en lista)
+	→ “ ”.join([variable1, variable2,...]) (concatena las variables añadiendo entre ellas el contenido que hay entre las comillas)
+	→ .round(variable, decimales)
+	→ .find() (Busca un texto dentro del string y nos devuelve su posicion, si no lo encuentra devuelve -1)	
+	→ .rfind() (hace lo mismo que find() pero empezando por el final)
+	→ .startswith() (devuelve True si el string comienza con un texto determinado)
+	→ .endswith() (devuelve True si el string finaliza con un texto determinado) 
+	→ .replace(antiguo, nuevo) ( reemplaza los caracteres antiguos con los nuevos de un string)
+	→ .count(texto) (Cuenta el numero de veces que se repita un texto string)
+	
+	# Metodos para saber el tipo de contenido del string:
+	→ .isdigit() (indica si es un numero el texto)
+	→ .isalpha() (indica si el texto son letras)
+	→ .isnum() (indica si el texto contiene caracteres numericos)
+	→ .isupper() (indica si el texto esta en mayusculas)
+	→ .islower() (indica si el texto esta en minusculas)
+	→ .isalnum() (indica si el texto es letras y numeros)
+	
+	
+	
+## Listas [] y Tuplas ()
+
+	→ Lista (sus valores son variables)
+	→ Tupla (sus valores son constantes)
+	
+	→ .append() (añadir dato al final de la lista)
+	→ .insert() (insertar dato en posicion especifica)
+	→ .clear() (vaciar lista)
+	→ .remove() (remover dato especifico)
+	→ .copy() (copiar dato)
+	→ .join() (añadir caracteres entre datos)
+	→ .pop() (borrar dato de la lista pero manteniendolo en popped)
+	→ .count() (contar elementos repetidos)
+	→ .index() (localiizar posicion de un dato).
+	→ .reverse() (invertir posiciones de la lista)
+	→ .sort() (organizar lista en orden alfabetico) (si se le añade reverse=True organiza de la Z a la A)
+	→ .extend() (unir varias listas) (lista_1.extend(lista_2)
+		
+	
+# Bucle For (bucles con datos determinados y finaliza cuando termina la accion)
+
+	→ break (rompe el bucle)
+	→ continue (salta un paso del bucle y continua con el resto)
+
+
+# Bucle While (se utiliza para ejecutar un bloque de codigo mientras cierta condicion de codigo sea True)
+
+	→ break (rompe el bucle)
+	→ continue (salta un paso del bucle y continua con el resto)
+	
+	
+# Diccionarios {} (condicion de claves-valor)
+
+ 	→ .keys() (obtener las claves del diccionario)
+ 	→ .get() (obtener los valores del diccionario)
+ 	→ .values() (obtener los valores del diccionario)
+ 	→ .items() (obtener lista de tuplas claves-valor)	
+ 
+ 
+# Sets {} (conjuntos de datos donde no se pueden repetir)
+ 
+ 	→ | (union de conjuntos)
+    → &amp; (interseccion de conjuntos que tienen en comun)
+    → - (operacion de diferencia entre conjuntos)
+
+	→ .add() (añadir dato)
+	→ .remove() (remover dato)
+	
+
+# Funciones def (bloques de codigo que se pueden utilizar llamandolos en cualquire momento del codigo)
+
+	→ Variables Globales (consta fuera de la funcion)
+	→ Variables Locales (consta solo dentro de la funcion)
+ 
+
+## Funciones input y print 
+ 
+  	→ input (recibir datos de entrada del usuario a traves de la consola)
+ 	→ print (imprimir informacion por consola)
+ 		→ sep = “-” (cambia la separacion de espacios en el simbolo que queramos)
+		→ end = “€” (añade simbolos al final de la variable)
+		
+		
+## Depuracion de errores en aplicaciones
+
+	→ marcar a la izq del numero de linea “breakpoint”
+	→ pulsar a la izq “Run and debug”
+	→ volvemos a pulsar en “Run and debug” y seleccionamos en archivo actual
+	→ con el boton de arriba “Step over” vamos saltando lineas y observando a la izquierda el progreso del programa line a linea.
+
+
+## Librerias
+
+	→ import Libreria
+		→ la llamada seria libreria.metodo1()
+	→ from libreria import metodo1(), metodo2()
+		→ la llamada seria solo al metodo (metodo1())
+		
+## Metodos
+	→ __init__ (Constructor)
+	→ __str__ (sobrescribir por como lo queramos)
+	
+	# Herencias
+	→ super() (recuperar un atributo de un metodo del main)
+
+BBDD:
+	→ Conection: Conectar con la base de datos utilizando una cadena de conexion.
+		-- Servidor. User, Password
+	→ Cursor: Objeto de base de datos que contiene las consultas SELECT.
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+	
+	
+	
+
+
+
+
+
+
+
+</rich_text>
+    <node unique_id="5" master_id="0" name="Librerias" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1771341737" ts_lastsave="1771859255">
+      <rich_text foreground="#ffbe6f">## Oracledb</rich_text>
+      <rich_text>
+
+→ connection: se designa como variable y se conecta oracledb con el metodo connect.
+	Ej: connection = oracledb.connect(user="system", password="oracle", dsn="localhost/FREEPDB1")
+	
+→ cursor: se crea una variable para ejecutar las consultas
+	Ej: cursor = connection.cursor()
+		  cursor.execute(variableConsultaSql)
+		
+→ .fetchone(): metodo que se mueve por cada fila cada vez que lo ejecutamos.
+	Ej: row = cursor.fetchone()
+	
+→ .close(): cerrar todos los recursos utilizados
+	cursor.close()
+	connection.close()
+
+→ .rowcount: cuenta las lineas que han sido afectadas(eliminadas).
+
+→ .commit(): confirmar la modificacion (solo para modificaciones o eliminaciones)
+→ .rollback(): volver a antes de la modificacion (solo para modificaciones o eliminaciones)
+
+
+</rich_text>
+      <rich_text foreground="#ffbe6f">## Django</rich_text>
+      <rich_text>
+
+	</rich_text>
+      <rich_text foreground="#c061cb"># Nuevo Proyecto</rich_text>
+      <rich_text>
+ 
+• django-admin startproject webproject (en terminal de python)
+   ◇ cd webproject
+      ▪ python3 manage.py startapp aplicacion
+
+→ Crear en carpeta “aplicacion” un nuevo fichero urls.py
+→ Arrancar proyecto: python3 manage.py runserver
+	→ Ejecutar la url que muestra en consola (127.0.0.1)
+
+→ .http
+
+
+
+
+
+
+
+
+
+		
+
+
+</rich_text>
+      <rich_text foreground="#ffbe6f">## Tkinter</rich_text>
+      <rich_text>
+
+→ from Tkinter import * (se importa Tkinter completo)
+→ import Tkinter (se importa el modulo tkinter)
+
+→ TK() (Creacion de ventana)
+→ .title() (añadir titulo a la ventana)
+→ .geometry("800x600+550+120) (tamaño de la ventana 800x600 = tamaño de la ventana / 550+120 posicion de la ventana en pantalla)
+→ Label(variable, text=" ") (Creacion de etiqueta dentro de la ventana)
+→ .grid(row=0, column=0) (posicionamiento en ventana de la etiqueta creada con Label)
+→ .mainloop() (Bucle de ejecucion de la ventana para que siempre este visible)
+→ .pack() (administrador que organiza los widgets en bloques)
+→ 
+
+
+	</rich_text>
+      <rich_text foreground="#c061cb"># Widgets</rich_text>
+      <rich_text>
+
+→ Entry (crear cuadro de texto)(misma funcion que input pero en gui)
+   ⇒ .get() (retorna el texto)
+   ⇒ .insert(posicion, texto) (texto que se mostrara en el cuadro de texto)
+   ⇒ .bind(evento, controlador) (evento puede ser un boton de raton.. de teclado.../controlador es una accion)
+
+→ Button(variable tkinter, text=" ", command=Evento) (Crea un boton con tkinter con un texto y una accion especifica)</rich_text>
+    </node>
+    <node unique_id="6" master_id="0" name="Django" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1771513963" ts_lastsave="1771858904">
+      <rich_text foreground="#57e389">## NUEVO PROYECTO</rich_text>
+      <rich_text>
+
+
+</rich_text>
+      <rich_text foreground="#ffbe6f"># index.html</rich_text>
+      <rich_text>
+html:5
+
+&lt;body&gt;
+	&lt;h1&gt;Menu Formulario&lt;/h1&gt;
+
+
+</rich_text>
+      <rich_text foreground="#ffbe6f"># views (formulario)</rich_text>
+      <rich_text>
+def index(request):
+	return render(request, “paginas/index.html”)
+	
+	
+</rich_text>
+      <rich_text foreground="#ffbe6f"># urls (formulario)</rich_text>
+      <rich_text>
+from django.urls import path
+from formularios import views
+
+urlpatterns = [9
+	path("", views.index, name="index")
+	
+]
+
+
+</rich_text>
+      <rich_text foreground="#ffbe6f"># urls (webinformacion)</rich_text>
+      <rich_text>
+from fjango.urls import path, include
+
+urlpatterns = [
+	path("", include("formularios.urls")),
+
+]
+
+</rich_text>
+      <rich_text foreground="#ffbe6f"># settings (webdatos)</rich_text>
+      <rich_text>
+→ INSTALLED_APPS (Añadir la app)
+
+
+
+
+	
+		</rich_text>
+    </node>
+  </node>
+  <node unique_id="2" master_id="0" name="Oracle SQL" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1770130084" ts_lastsave="1770242417">
+    <rich_text>User: SYSTEM
+Password: oracle
+Port: 1521
+SSID: FREEPDB1
+
+
+-- PODEMOS TENER VARIAS CONSULTAS EN ESTE SCRIPT
+-- SOLAMENTE SE EJECUTA EN LA QUE ESTEMOS POSICIONADOS (CNTRL + ENTER)
+-- NO EXISTE DIFERENCIA CASE SENSITIVE (MAYUS O MINUS)
+-- EL * SE UTILIZA PARA INDICAR TODAS LAS COLUMNAS DE UNA TABLA
+-- select COLUMNA1, COLUMNA2 from TABLA
+select * from DEPT;
+select * from EMP;
+
+-- EXISTEN CONSULTAS QUE SON MAS OPTIMAS QUE OTRAS Y DEVUELVEN LO MISMO
+select DEPT_NO, DNOMBRE, LOC FROM DEPT;
+
+-- ORDENAR LOS DATOS: order by CAMPO
+select * from EMP order by SALARIO desc;
+select * from EMP order by OFICIO desc;
+
+-- FILTROS DE CONSULTAS
+-- permiten filtrar registros por columnas en sus datos, utilizan el operador "where"
+-- utilizan operadores condicionales, si el dato a filtrar no es un numero, se utilizan las comillas simples ''
+-- Algunos son diferentes a PYTHON
+/*
+= IGUAL
+&lt;&gt; DISTINTO
+&gt; MAYOR
+&gt;= MAYOR O IGUAL
+&lt; MENOR
+&lt;= MENOR O IGUAL
+*/
+-- mostrar los empleados del departamento 10
+-- where CAMPO = VALOR
+select * from EMP where DEPT_NO = 10;
+-- mostrar todos los empleados con oficio director
+-- Oracle diferencian en sus datos string
+select * from EMP where OFICIO = 'DIRECTOR';
+select * from EMP where OFICIO = 'director';
+-- mostrar los empleados que sean distintos al departamento 10
+select * from EMP where DEPT_NO &lt;&gt; 10;
+-- = select * from EMP where DEPT_NO != 10;
+
+-- OPERADORES RELACIONALES
+-- permiten filtrar por mas de una condicion, solamente podemos tener un where
+-- AND: todas las condiciones se deben cumplir
+-- OR: devuelven registros de cada condicion
+-- NOT: negacion de una condicion
+-- Mostrar todos los empleados con oficion director y un salario mayor a 300.000
+select * from EMP where OFICIO='DIRECTOR' or SALARIO &gt; 300000;
+-- Mostrar todos los empleados que sean del departamento 10 y el departamento 20
+select * from EMP where DEPT_NO=10 or DEPT_NO=20;
+-- Mostrar todos los empleados que no sean del departamento 20
+select * from EMP where not DEPT_NO = 20;
+-- = select * from EMP where DEPT_NO &lt;&gt; 20;
+
+-- Existen otra serie de operadores de comparacion ademas de los basicos
+-- "between" busca entre dos rangos inclusive
+-- Mostrar todos los empleados que tengan un salario entre 123500 y 318500
+select * from EMP where SALARIO between 123500 and 318500;
+select * from EMP where SALARIO &gt;= 123500 and SALARIO &lt;= 318500;
+
+-- Operador "IN" permite buscar entre diferentes valores de un mismo campo
+-- Mostrar todos los empleados del departamento 10 y 20
+select * from EMP where DEPT_NO in (10, 20, 30);
+-- = select * from EMP where DEPT_NO = 10 or DEPT_NO = 20 or DEPT_NO = 30;
+
+-- Operador "NOT IN" que busca entre diferentes valores de un mismo campo y devuelve los que correspondan
+-- Mostrar todos los empleados que no esten en el departamento 10 y 20
+select * from EMP where NOT DEPT_NO in (10,20); -- ESTO ES UNA NEGACION, NO EFICIENTE
+select * from EMP where DEPT_NO not in (10,20);
+
+-- Tenemos un operador que nos permite hacer busquedas dentro de textos.
+-- Es el operador "like" y utiliza caravteristicas especiales para las busquedas.
+    -- ? Busca si el caracter es un numero
+    -- _ Cualquier unico caracter
+    -- % Cualquier caracter y cualquier tamaño
+-- Mostrar todos los empleados cuyo apellido comienza en "s"
+select * from EMP where APELLIDO like 's%';
+-- Mostrar todos los empleados cuyo apellido comienza en "s" y finalicen en "a"
+select * from EMP where APELLIDO like 's%a';
+-- Mostrar todos los empleados cuyo apellido tenga 4 letras
+select * from EMP where APELLIDO like '____';
+
+-- Clausula "distinct" elimina datos repetidos de la consulta
+-- Se suele utilizar con pocos campos
+select distinct OFICIO from EMP;
+
+-- Campos calculados. Son columnas que no existen en la tabla y que podemos generar con una consulta
+-- Los campos calculados siempre deben tener un ALIAS, se interpreta con "as"
+select APELLIDO, OFICIO, SALARIO + COMISION as TOTALSALARIO from EMP;
+
+-- no podemos utilizar where con campos calculador (mentira).
+    -- Where filtra sobre la tabla
+    -- Si queremos filtrar sobre un campo calculado, debemos escribir el calculo de nuevo para el where
+select APELLIDO, OFICIO, SALARIO + COMISION as TOTAL from EMP where (SALARIO + COMISION) &gt;= 300000;
+-- si podemos utilizar order by con campos calculados.
+    -- "order by" ordena sobre el cursor
+select APELLIDO, OFICIO, SALARIO + COMISION as TOTAL from EMP order by TOTAL;
+
+-- CONSULTAS DE AGRUPACION
+
+( CONTENIDO DEL WORD DE CLASE)
+
+
+-- Mostrar el numero de empleados de la tabla
+select count(*) as REGISTROS from EMP;
+
+-- Podemos combinar varias funciones en una misma consulta
+-- Mostrar numero de empleados y la suma salarial de todo
+select count(*) as REGISTROS, sum(SALARIO) as SUMASALARIAL, MAX(SALARIO) as AL from EMP;
+
+-- Queremos saber el numero de empleados por cada oficio
+select count(*) as EMPLEADOS, OFICIO from EMP group by OFICIO;
+
+-- Mostrar el Maximo salario, numero de personas por cada oficio y por cada departamento.
+select max(SALARIO) as MAXIMOSALARIO, count(*) as PERSONAS, OFICIO, DEPT_NO from EMP group by OFICIO, DEPT-NO;
+
+
+(ESTRUCTURAS WORD)
+
+-- Mostrar el numero de personas por cada OFICIO
+-- pero solamente mostrando DIRECTOR Y ANALISTA
+select count(*) as PERSONAS,OFICIO from EMP where OFICIO in ('ANALISTA', ‘DIRECTOR’) group by OFICIO;
+
+-- Mostrar el numero de empleados por cada oficio pero solamente mostrando los oficios donde tengamos mas de 2 personas trabajando
+select count (*) as PERSONAS, OFICIO from EMP group by OFICIO having count(*) &gt; 2;
+
+-- Mostrar la suma salarial por cada oficio solamente de las personas que tengan una comision mayor a 0.
+select sum(SALARIO) as SUMASALARIAL, OFICIO from EMP where comision &gt; 0 group by OFICIO;
+
+-- Mostrar la suma salarial por cada oficio solamente de las personas que tengan una comision mayor a 0 y cuya suma salarial sea mayot a 51500.
+select sum(SALARIO) as SUMASALARIAL, OFICIO from EMP where comision &gt; 0 group by OFICIO having sum(SALARIO) &gt; 51500;
+
+
+</rich_text>
+  </node>
+</cherrytree>
